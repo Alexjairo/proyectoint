@@ -1,40 +1,48 @@
-<ion-content >
-<ion-navbar color  = "#DD411F">
-  <ion-title>
-BIENVENIDOS
-  </ion-title>
+<!-- <ion-slides pager >
+
+  <ion-slide style="background-color:rgba(138,221,45,0.2);" >
+    <h2> width="580" height="390" src="assets/imgs/descarga.jpg"</h2>
+  </ion-slide>
+
+  <ion-slide style="background-color: blue">
+    <h2>Slide 2</h2>
+  </ion-slide>
+
+
+</ion-slides> -->
+
+<ion-header>
+
+  <ion-navbar color="maroon">
+    <ion-title text-center >
+   CELSIS
+    </ion-title>
+
+
+ 
   </ion-navbar>
-  <ion-item>
+</ion-header>
+  <ion-content >
+    <ion-card >
+      
+        <img  text-center src="assets/imgs/descarga.jpg">
+    </ion-card>
     
-      <ion-img width="80" height="80" src="assets/imgs/descarga.jpg"></ion-img>
-  
+   <button (click)="Regist()" color="azul" ion-button full icon-left>
+     <ion-icon name="md-person-add">
+       Registrarse
+      </ion-icon>
+    </button>
+   <button (click)="Ingresar()" ion-button full color="secondary" icon-left > 
+     <ion-icon name="md-key">
+       Ingresar
+      </ion-icon>
+    </button>
+   <button (click)="Invi()"  ion-button full color="danger" icon-left>
+      <ion-icon name="md-man">
+        Invitado
+      </ion-icon>
+    </button>
 
+  </ion-content>
 
-    </ion-item>
-  <ion-list>
-
-      <ion-item>
-        
-        <ion-label > Username</ion-label>
-        <ion-input type="text"></ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label>Password</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-    
-    </ion-list>
-    
-    <div padding>
-       
-<button ion-button full  >crear cuenta</button>
-<button ion-button full color="secondary">ingrasar</button>
-<button ion-button full color="danger">invitado</button>
-
-    </div>    
-<!-- <img  src=""/>
-    <div class="card-title">São Paulo</div>
-    <div class="card-subtitle">41 Listings</div>
-  </ion-card>
-  -->
