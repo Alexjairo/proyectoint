@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,  AlertController } from 'ionic-angular';
 import { RegistrarsePage } from '../registrarse/registrarse';
 import { IngresarPage } from '../ingresar/ingresar';
 
@@ -9,14 +9,25 @@ import { IngresarPage } from '../ingresar/ingresar';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public registrar: AlertController, public entrar:AlertController ) {
 
   }
 Regist(){
-  this.navCtrl.push( RegistrarsePage );
+    let mialerta = this.registrar.create({
+      title:'titulo de alerta',
+      message:'mensaje',
+      buttons:['entendido']
+    });
+  mialerta.present();
+  // this.navCtrl.push( RegistrarsePage );
 }
 Ingresar(){
-  this.navCtrl.push(IngresarPage);
+  let mialerta = this.entrar.create({
+    title:'titulo de alerta',
+    message:'mensaje',
+    buttons:['entendido']
+  });
+mialerta.present();
 }
 
 }
